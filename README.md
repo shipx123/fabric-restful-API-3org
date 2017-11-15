@@ -10,14 +10,14 @@ A sample Node.js app to demonstrate **__fabric-client__** & **__fabric-ca-client
 * [Download Docker images](http://hyperledger-fabric.readthedocs.io/en/latest/samples.html#binaries)
 
 ```
-cd fabric-restful-API
+cd fabric-restful-API-3org
 ```
 
 Once you have completed the above setup, you will have provisioned a local network with the following docker container configuration:
 
 * 2 CAs
 * A SOLO orderer
-* 4 peers (2 peers per Org)
+* 6 peers (2 peers per Org)
 
 #### Artifacts
 * Crypto material has been generated using the **cryptogen** tool from Hyperledger Fabric and mounted to all peers, the orderering node and CA containers. More details regarding the cryptogen tool are available [here](http://hyperledger-fabric.readthedocs.io/en/latest/build_network.html#crypto-generator).
@@ -60,7 +60,7 @@ PORT=4000 node app
 ##### Terminal Window 1
 
 ```
-cd fabric-restful-API
+cd fabric-restful-API-3org
 
 ./runApp.sh
 
@@ -79,7 +79,7 @@ instructions [https://stedolan.github.io/jq/](https://stedolan.github.io/jq/)
 
 With the application started in terminal 1, next, test the APIs by executing the script - **testAPIs.sh**:
 ```
-cd fabric-restful-API
+cd fabric-restful-API-3org
 
 ./testAPIs.sh
 
